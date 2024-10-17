@@ -1,0 +1,49 @@
+* {
+	font-family: monospace;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: linear-gradient(#6fb7ff, #a4b5ff);
+	background-repeat: no-repeat;
+	height: 160vh;
+	width: 100%;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(8, 100px);
+	grid-template-rows: repeat(8, 100px);
+	justify-content: center;
+}
+
+.square {
+	height: 100px;
+	width: 100px;
+	border: solid black 1px;
+}
+
+/* Using nth-child, every 16 element is turned to black, the second value is where it starts on the grid. 1 starts at the first box in the upper left-hand corner.
+10 is when you count from 1 to the right and end up at the 10th box of the grid. Basically the first value is going to be the alternating, and the second is where it starts on a specific box. */
+.square:nth-child(16n + 1),
+.square:nth-child(16n + 3),
+.square:nth-child(16n + 5),
+.square:nth-child(16n + 7),
+.square:nth-child(16n + 10),
+.square:nth-child(16n + 12),
+.square:nth-child(16n + 14),
+.square:nth-child(16n + 16) {
+	background-color: black;
+}
+
+.square:nth-child(16n + 2),
+.square:nth-child(16n + 4),
+.square:nth-child(16n + 6),
+.square:nth-child(16n + 8),
+.square:nth-child(16n + 9),
+.square:nth-child(16n + 11),
+.square:nth-child(16n + 13),
+.square:nth-child(16n + 15) {
+	background-color: white;
+}

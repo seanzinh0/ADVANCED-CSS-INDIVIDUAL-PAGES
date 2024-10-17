@@ -1,0 +1,35 @@
+* {
+	font-family: monospace;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: linear-gradient(#6fb7ff, #a4b5ff);
+	background-repeat: no-repeat;
+	height: 160vh;
+	width: 100%;
+}
+
+.flag {
+	display: flex;
+	justify-content: center;
+	border-spacing: 0;
+}
+
+.stars {
+	position: absolute;
+}
+
+.stripes-red {
+	display: block;
+	height: 63px;
+	width: 1400px;
+	background-color: red;
+}
+.stripes {
+	display: block;
+	height: 63px;
+	width: 1400px;
+	background-color: white;
+}
